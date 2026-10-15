@@ -33,4 +33,20 @@ class CalculatorTest {
         List<Integer> nums = Arrays.asList(1, 2, 3, null, 4);
         assertEquals(c.sumUp(nums), c.addAll(nums));
     }
+
+    @Test
+    void sum_methods_negativeValues(){
+        Calculator c = new Calculator();
+        List<Integer> nums = Arrays.asList(null, null, null, -1, -69, -67, -6, -7);
+
+        assertEquals(c.sumUp(nums), c.addAll(nums));
+    }
+
+    @Test
+    void subtract_equals_negativeAdd(){
+        Calculator c = new Calculator();
+        assertEquals(c.subtract(5, 10), c.add(5, -10));
+        assertEquals(c.subtract(-5, -10), c.add(-5, 10));
+        assertEquals(c.subtract(-5, 10), c.add(-5, -10));
+    }
 }
