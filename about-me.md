@@ -1,6 +1,6 @@
 # About me
 Name: LukMayr
-Studiengang: MC
+Studiengang: Mobile Computing
 Erwartungen:  
 - Use Cases für ein gutes CI/CD System 
 Fakten über dich
