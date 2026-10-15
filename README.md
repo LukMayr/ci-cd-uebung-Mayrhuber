@@ -37,6 +37,10 @@ Coverage-Report (für Übung 2 / SonarCloud): `target/site/jacoco/index.html`
 ---
 
 ## Übung 1 – Aufgaben (24 Punkte)
+- Autor: @LukMayr
+- Besonderheit
+  - seit 2021 auf GitHub.
+  - in allen meinen Praktika mit Github/Gitlab extensive gearbeitet.
 
 ### (1) Repository einrichten (4 P.) – **Fork & Clone / Template / ZIP**
 > Lege **dein eigenes Repo** mit dem Namen **`ci-cd-uebung-[Nachname]`** an und bringe das Starterprojekt hinein. Wähle **eine** der Varianten.
