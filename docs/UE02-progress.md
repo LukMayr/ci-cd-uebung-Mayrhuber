@@ -27,7 +27,39 @@ return input.equalsIgnoreCase(reversed);
 Berücksichtigung der Groß-/Kleinschreibung und benötigt keine localeabhängige
 Umwandlung. Der vorhandene Test mit `Anna` prüft den Fehler. Zusätzliche Tests
 decken leere Strings, ein Zeichen, weitere Palindrome, Nicht-Palindrome und `null` ab.
-Diese Änderung wurde lokal identifiziert; sie ist noch kein dokumentierter SonarCloud-Befund.
+Der erste SonarCloud-Scan auf dem unveränderten Main-Branch bestätigt den Fehler:
+`java:S4973`, Issue `AaGr8PdCU3o20iwK5k0w`, Zeile 8.
+Die unbearbeiteten API-Ergebnisse liegen in `docs/evidence/baseline-issues.json`.
+
+## Behebung der doppelten Summenberechnung
+
+SonarCloud: `java:S4144`, Issue `AaGr8PdBU3o20iwK5k0v`,
+`Calculator.java`, Zeile 42. `addAll` enthielt dieselbe Schleife wie `sumUp`.
+Die Methode delegiert nun an `sumUp`, sodass nur eine Implementierung gepflegt wird.
+Die vorhandenen Tests prüfen beide Methoden gegen die konkreten Ergebnisse 10 und
+-150, einschließlich `null`-Einträgen und negativen Zahlen.
+
+Vorher:
+
+```java
+public int addAll(List<Integer> nums) {
+    int s = 0;
+    for (Integer n : nums) {
+        if (n != null) {
+            s += n;
+        }
+    }
+    return s;
+}
+```
+
+Nachher:
+
+```java
+public int addAll(List<Integer> nums) {
+    return sumUp(nums);
+}
+```
 
 ## Matrix und Artefakte
 
@@ -45,19 +77,31 @@ Diese Änderung wurde lokal identifiziert; sie ist noch kein dokumentierter Sona
 - Java 17: `mvn --batch-mode --no-transfer-progress clean verify` erfolgreich.
 - Java 21: `mvn --batch-mode --no-transfer-progress clean verify` erfolgreich.
 - Jeweils 16 Tests, 0 Failures, 0 Errors, 0 Skipped.
-- JaCoCo XML und HTML vorhanden; 25 von 47 Zeilen abgedeckt (ca. 53,2 %).
+- JaCoCo XML und HTML vorhanden; nach Entfernung der duplizierten Schleife
+  20 von 42 Zeilen abgedeckt (ca. 47,6 %).
 - Workflow mit actionlint 1.7.12 ohne Fehler validiert.
 - GitHub Actions auf die verifizierten Commit-SHAs von checkout v7,
   setup-java v6 und upload-artifact v7 festgelegt.
+
+## Hosted CI und SonarCloud-Baseline
+
+- [CI-Run #1](https://github.com/LukMayr/ci-cd-uebung-Mayrhuber/actions/runs/42037328862):
+  alle drei Matrix-Jobs erfolgreich, drei Surefire- und drei JaCoCo-Artefakte vorhanden.
+- SonarCloud wurde im PR erwartungsgemäß übersprungen; der Job ist für Main-Pushes konfiguriert.
+- [SonarCloud-Projekt](https://sonarcloud.io/project/overview?id=LukMayr_ci-cd-uebung-Mayrhuber):
+  Organisation `lukmayr`, initiale Analyse vom 5. November 2026, 13:40:47 UTC.
+- Baseline: 11 offene Issues (1 Bug, 10 Code Smells), kein Coverage-Wert,
+  Quality-Gate-Status `NONE`. Das ist noch kein erfolgreicher CI-Scan.
+- Die beiden oben dokumentierten Befunde sind behoben; die Bestätigung durch einen
+  weiteren SonarCloud-Scan steht noch aus.
 
 ## Noch offen für den finalen PDF-Bericht
 
 - Erfolgreiche GitHub-Actions-Matrix mit Run-URL und Screenshot.
 - Drei Surefire-Artefakte mit Screenshot.
-- SonarCloud-Projekt, Organization-/Project-Key und Repository-Secret konfigurieren.
+- Repository-Secret `SONAR_TOKEN` konfigurieren. Die öffentlichen Schlüssel stehen im POM.
 - Automatic Analysis deaktivieren und erste CI-Analyse ausführen.
-- Mindestens zwei tatsächliche SonarCloud-Befunde vor der Behebung mit Regel/Ort sichern.
-- Befunde beheben, Vorher/Nachher dokumentieren und erneut analysieren.
+- Die zwei behobenen SonarCloud-Befunde durch erneute Analyse verifizieren.
 - SonarCloud-Dashboard, Coverage und Quality Gate mit Screenshots belegen.
 - Finalen PDF-Bericht aus den verifizierten Ergebnissen erstellen.
 

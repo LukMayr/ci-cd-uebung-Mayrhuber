@@ -1,0 +1,29 @@
+{
+  "component": {
+    "id": "AaGr8LApI0NMjiG424EW",
+    "key": "LukMayr_ci-cd-uebung-Mayrhuber",
+    "name": "ci-cd-uebung-Mayrhuber",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "bugs",
+        "value": "1",
+        "bestValue": false
+      },
+      {
+        "metric": "code_smells",
+        "value": "10",
+        "bestValue": false
+      },
+      {
+        "metric": "ncloc",
+        "value": "149"
+      },
+      {
+        "metric": "vulnerabilities",
+        "value": "0",
+        "bestValue": true
+      }
+    ]
+  }
+}

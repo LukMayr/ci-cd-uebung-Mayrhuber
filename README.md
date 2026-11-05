@@ -46,10 +46,12 @@ haben je Commit eine eigene Concurrency-Gruppe.
 SonarCloud-Einrichtung:
 
 1. Dieses GitHub-Repository in SonarCloud importieren und **Automatic Analysis deaktivieren**.
-2. Unter GitHub **Settings → Secrets and variables → Actions → Variables**
-   `SONAR_ORGANIZATION` und `SONAR_PROJECT_KEY` mit den tatsächlichen SonarCloud-Schlüsseln anlegen.
-3. Unter **Secrets** einen Token mit Analyserechten als `SONAR_TOKEN` hinterlegen.
-4. Auf `main` ausführen und Analyse, Coverage sowie Quality Gate prüfen.
+2. Unter GitHub **Settings → Secrets and variables → Actions → Secrets**
+   einen Token mit Analyserechten als `SONAR_TOKEN` hinterlegen.
+3. Auf `main` ausführen und Analyse, Coverage sowie Quality Gate prüfen.
+
+Die öffentlichen Schlüssel stehen in `pom.xml`: Organisation `lukmayr`,
+Projekt `LukMayr_ci-cd-uebung-Mayrhuber`.
 
 Der Maven-Scanner liest `SONAR_TOKEN` aus der Umgebung; Tokens gehören nicht in den Quellcode.
 Die Analyse importiert `target/site/jacoco/jacoco.xml` und wartet auf das Quality Gate.
