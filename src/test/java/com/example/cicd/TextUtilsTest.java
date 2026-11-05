@@ -1,13 +1,11 @@
 package com.example.cicd;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.NullSource;
+import org.junit.jupiter.params.provider.ValueSource;
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- * Hinweis:
- * - Dieser Test wird voraussichtlich FAILEN, weil isPalindrome '==' nutzt.
- * - In Uebung 2 sollte dieser Bug gefixt werden.
- */
 class TextUtilsTest {
 
     @Test
@@ -23,5 +21,18 @@ class TextUtilsTest {
     @Test
     void isPalindrome_caseInsensitive_expectedTrue() {
         assertTrue(TextUtils.isPalindrome("Anna"));
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"", "a", "abba", "RaceCar"})
+    void isPalindrome_palindromes_returnTrue(String input) {
+        assertTrue(TextUtils.isPalindrome(input));
+    }
+
+    @ParameterizedTest
+    @NullSource
+    @ValueSource(strings = {"hello", "ab", "Anna!"})
+    void isPalindrome_otherInputs_returnFalse(String input) {
+        assertFalse(TextUtils.isPalindrome(input));
     }
 }

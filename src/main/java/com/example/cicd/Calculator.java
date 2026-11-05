@@ -28,7 +28,6 @@ public class Calculator {
         return a / b; // Integer Division
     }
 
-    // Duplizierte Logik (sumUp vs. addAll) für Sonar "Duplicated code"
     public int sumUp(List<Integer> nums) {
         int s = 0;
         for (Integer n : nums) {
@@ -40,12 +39,6 @@ public class Calculator {
     }
 
     public int addAll(List<Integer> nums) {
-        int s = 0;
-        for (Integer n : nums) {
-            if (n != null) {
-                s += n;
-            }
-        }
-        return s;
+        return sumUp(nums);
     }
 }

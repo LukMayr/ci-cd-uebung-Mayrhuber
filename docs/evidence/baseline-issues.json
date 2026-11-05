@@ -1,0 +1,563 @@
+{
+  "total": 11,
+  "p": 1,
+  "ps": 100,
+  "paging": {
+    "pageIndex": 1,
+    "pageSize": 100,
+    "total": 11
+  },
+  "effortTotal": 82,
+  "debtTotal": 82,
+  "issues": [
+    {
+      "key": "AaGr8PdAU3o20iwK5k0u",
+      "rule": "java:S9438",
+      "severity": "MINOR",
+      "component": "LukMayr_ci-cd-uebung-Mayrhuber:src/main/java/com/example/cicd/NumberUtils.java",
+      "project": "LukMayr_ci-cd-uebung-Mayrhuber",
+      "line": 7,
+      "hash": "b7cb6eac4f0657dec8b6c4390cd032b9",
+      "textRange": {
+        "startLine": 7,
+        "endLine": 7,
+        "startOffset": 4,
+        "endOffset": 34
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make this private field \"final\", it is never reassigned.",
+      "effort": "2min",
+      "debt": "2min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2025-10-06T12:51:44+0000",
+      "updateDate": "2026-11-05T13:40:47+0000",
+      "type": "CODE_SMELL",
+      "organization": "lukmayr",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "LOW"
+        },
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "ci-cd-uebung-Mayrhuber",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "b6046996-7746-4b69-8aab-38bfa39ab457",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaGr8PbwU3o20iwK5k0o",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "LukMayr_ci-cd-uebung-Mayrhuber:src/main/java/com/example/cicd/App.java",
+      "project": "LukMayr_ci-cd-uebung-Mayrhuber",
+      "line": 9,
+      "hash": "d6f791998c96f9538033e39bcad90301",
+      "textRange": {
+        "startLine": 9,
+        "endLine": 9,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "tags": [
+        "bad-practice",
+        "cert"
+      ],
+      "creationDate": "2025-10-06T12:27:18+0000",
+      "updateDate": "2026-11-05T13:40:47+0000",
+      "type": "CODE_SMELL",
+      "organization": "lukmayr",
+      "cleanCodeAttribute": "MODULAR",
+      "cleanCodeAttributeCategory": "ADAPTABLE",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "ci-cd-uebung-Mayrhuber",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "b6046996-7746-4b69-8aab-38bfa39ab457",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaGr8PbwU3o20iwK5k0p",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "LukMayr_ci-cd-uebung-Mayrhuber:src/main/java/com/example/cicd/App.java",
+      "project": "LukMayr_ci-cd-uebung-Mayrhuber",
+      "line": 14,
+      "hash": "353faa65255b682ffa119d5eeaabef62",
+      "textRange": {
+        "startLine": 14,
+        "endLine": 14,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "tags": [
+        "bad-practice",
+        "cert"
+      ],
+      "creationDate": "2025-09-29T08:11:43+0000",
+      "updateDate": "2026-11-05T13:40:47+0000",
+      "type": "CODE_SMELL",
+      "organization": "lukmayr",
+      "cleanCodeAttribute": "MODULAR",
+      "cleanCodeAttributeCategory": "ADAPTABLE",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "ci-cd-uebung-Mayrhuber",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "b6046996-7746-4b69-8aab-38bfa39ab457",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaGr8PbwU3o20iwK5k0q",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "LukMayr_ci-cd-uebung-Mayrhuber:src/main/java/com/example/cicd/App.java",
+      "project": "LukMayr_ci-cd-uebung-Mayrhuber",
+      "line": 16,
+      "hash": "8886157bd292f3116895504d29ac5669",
+      "textRange": {
+        "startLine": 16,
+        "endLine": 16,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "tags": [
+        "bad-practice",
+        "cert"
+      ],
+      "creationDate": "2025-09-29T08:11:43+0000",
+      "updateDate": "2026-11-05T13:40:47+0000",
+      "type": "CODE_SMELL",
+      "organization": "lukmayr",
+      "cleanCodeAttribute": "MODULAR",
+      "cleanCodeAttributeCategory": "ADAPTABLE",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "ci-cd-uebung-Mayrhuber",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "b6046996-7746-4b69-8aab-38bfa39ab457",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaGr8PbwU3o20iwK5k0r",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "LukMayr_ci-cd-uebung-Mayrhuber:src/main/java/com/example/cicd/App.java",
+      "project": "LukMayr_ci-cd-uebung-Mayrhuber",
+      "line": 17,
+      "hash": "81cbfe569e87ad343db89f5712e281e3",
+      "textRange": {
+        "startLine": 17,
+        "endLine": 17,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "tags": [
+        "bad-practice",
+        "cert"
+      ],
+      "creationDate": "2025-09-29T08:11:43+0000",
+      "updateDate": "2026-11-05T13:40:47+0000",
+      "type": "CODE_SMELL",
+      "organization": "lukmayr",
+      "cleanCodeAttribute": "MODULAR",
+      "cleanCodeAttributeCategory": "ADAPTABLE",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "ci-cd-uebung-Mayrhuber",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "b6046996-7746-4b69-8aab-38bfa39ab457",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaGr8PbwU3o20iwK5k0s",
+      "rule": "java:S106",
+      "severity": "MAJOR",
+      "component": "LukMayr_ci-cd-uebung-Mayrhuber:src/main/java/com/example/cicd/App.java",
+      "project": "LukMayr_ci-cd-uebung-Mayrhuber",
+      "line": 18,
+      "hash": "6dab3abc6a2f7a01113f288d3b90b191",
+      "textRange": {
+        "startLine": 18,
+        "endLine": 18,
+        "startOffset": 8,
+        "endOffset": 18
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this use of System.out by a logger.",
+      "effort": "10min",
+      "debt": "10min",
+      "tags": [
+        "bad-practice",
+        "cert"
+      ],
+      "creationDate": "2025-09-29T08:11:43+0000",
+      "updateDate": "2026-11-05T13:40:47+0000",
+      "type": "CODE_SMELL",
+      "organization": "lukmayr",
+      "cleanCodeAttribute": "MODULAR",
+      "cleanCodeAttributeCategory": "ADAPTABLE",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "ci-cd-uebung-Mayrhuber",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "b6046996-7746-4b69-8aab-38bfa39ab457",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaGr8PdBU3o20iwK5k0v",
+      "rule": "java:S4144",
+      "severity": "MAJOR",
+      "component": "LukMayr_ci-cd-uebung-Mayrhuber:src/main/java/com/example/cicd/Calculator.java",
+      "project": "LukMayr_ci-cd-uebung-Mayrhuber",
+      "line": 42,
+      "hash": "e17c970ff1043c088ae08fd0b247b0cb",
+      "textRange": {
+        "startLine": 42,
+        "endLine": 42,
+        "startOffset": 15,
+        "endOffset": 21
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "LukMayr_ci-cd-uebung-Mayrhuber:src/main/java/com/example/cicd/Calculator.java",
+              "textRange": {
+                "startLine": 32,
+                "endLine": 32,
+                "startOffset": 15,
+                "endOffset": 20
+              },
+              "msg": "original implementation"
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Update this method so that its implementation is not identical to \"sumUp\" on line 32.",
+      "effort": "15min",
+      "debt": "15min",
+      "tags": [
+        "confusing",
+        "duplicate",
+        "suspicious"
+      ],
+      "creationDate": "2025-09-29T08:11:43+0000",
+      "updateDate": "2026-11-05T13:40:47+0000",
+      "type": "CODE_SMELL",
+      "organization": "lukmayr",
+      "cleanCodeAttribute": "DISTINCT",
+      "cleanCodeAttributeCategory": "ADAPTABLE",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "ci-cd-uebung-Mayrhuber",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "b6046996-7746-4b69-8aab-38bfa39ab457",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaGr8PdAU3o20iwK5k0t",
+      "rule": "java:S6208",
+      "severity": "INFO",
+      "component": "LukMayr_ci-cd-uebung-Mayrhuber:src/main/java/com/example/cicd/NumberUtils.java",
+      "project": "LukMayr_ci-cd-uebung-Mayrhuber",
+      "line": 17,
+      "hash": "5830b6f7dd94438483a8feef1321d5c0",
+      "textRange": {
+        "startLine": 17,
+        "endLine": 17,
+        "startOffset": 12,
+        "endOffset": 20
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "LukMayr_ci-cd-uebung-Mayrhuber:src/main/java/com/example/cicd/NumberUtils.java",
+              "textRange": {
+                "startLine": 16,
+                "endLine": 16,
+                "startOffset": 12,
+                "endOffset": 20
+              }
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Merge the previous cases into this one using comma-separated label.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "java14"
+      ],
+      "creationDate": "2025-09-29T08:11:43+0000",
+      "updateDate": "2026-11-05T13:40:47+0000",
+      "type": "CODE_SMELL",
+      "organization": "lukmayr",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "ci-cd-uebung-Mayrhuber",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "b6046996-7746-4b69-8aab-38bfa39ab457",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaGr8PdCU3o20iwK5k0x",
+      "rule": "java:S1118",
+      "severity": "MAJOR",
+      "component": "LukMayr_ci-cd-uebung-Mayrhuber:src/main/java/com/example/cicd/TextUtils.java",
+      "project": "LukMayr_ci-cd-uebung-Mayrhuber",
+      "line": 3,
+      "hash": "6bb46e17e527f1dc58b950f56ba23dfc",
+      "textRange": {
+        "startLine": 3,
+        "endLine": 3,
+        "startOffset": 13,
+        "endOffset": 22
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Add a private constructor to hide the implicit public one.",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2025-09-29T08:11:43+0000",
+      "updateDate": "2026-11-05T13:40:47+0000",
+      "type": "CODE_SMELL",
+      "organization": "lukmayr",
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "ci-cd-uebung-Mayrhuber",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "b6046996-7746-4b69-8aab-38bfa39ab457",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaGr8PdCU3o20iwK5k0w",
+      "rule": "java:S4973",
+      "severity": "MAJOR",
+      "component": "LukMayr_ci-cd-uebung-Mayrhuber:src/main/java/com/example/cicd/TextUtils.java",
+      "project": "LukMayr_ci-cd-uebung-Mayrhuber",
+      "line": 8,
+      "hash": "a97d68c16bb8361c8168d2f28c234a1d",
+      "textRange": {
+        "startLine": 8,
+        "endLine": 8,
+        "startOffset": 35,
+        "endOffset": 37
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Strings and Boxed types should be compared using \"equals()\".",
+      "effort": "5min",
+      "debt": "5min",
+      "tags": [
+        "cert",
+        "cwe"
+      ],
+      "creationDate": "2025-09-29T08:11:43+0000",
+      "updateDate": "2026-11-05T13:40:47+0000",
+      "type": "BUG",
+      "organization": "lukmayr",
+      "cleanCodeAttribute": "LOGICAL",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "RELIABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "ci-cd-uebung-Mayrhuber",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "b6046996-7746-4b69-8aab-38bfa39ab457",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaGr8PdDU3o20iwK5k0y",
+      "rule": "java:S1135",
+      "severity": "INFO",
+      "component": "LukMayr_ci-cd-uebung-Mayrhuber:src/test/java/com/example/cicd/CalculatorTest.java",
+      "project": "LukMayr_ci-cd-uebung-Mayrhuber",
+      "line": 20,
+      "hash": "7ce29fd77abd9f77be03fc87198bbd31",
+      "textRange": {
+        "startLine": 20,
+        "endLine": 20,
+        "startOffset": 0,
+        "endOffset": 59
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Complete the task associated to this TODO comment.",
+      "effort": "0min",
+      "debt": "0min",
+      "tags": [
+        "cwe"
+      ],
+      "creationDate": "2025-09-29T08:11:43+0000",
+      "updateDate": "2026-11-05T13:40:47+0000",
+      "type": "CODE_SMELL",
+      "organization": "lukmayr",
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "ci-cd-uebung-Mayrhuber",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "b6046996-7746-4b69-8aab-38bfa39ab457",
+      "lastChangeSource": "ANALYSIS"
+    }
+  ],
+  "components": [
+    {
+      "organization": "lukmayr",
+      "key": "LukMayr_ci-cd-uebung-Mayrhuber",
+      "uuid": "AaGr8LApI0NMjiG424EW",
+      "enabled": true,
+      "qualifier": "TRK",
+      "name": "ci-cd-uebung-Mayrhuber",
+      "longName": "ci-cd-uebung-Mayrhuber"
+    },
+    {
+      "organization": "lukmayr",
+      "key": "LukMayr_ci-cd-uebung-Mayrhuber:src/test/java/com/example/cicd/CalculatorTest.java",
+      "uuid": "AaGr8PRVU3o20iwK5k0k",
+      "enabled": true,
+      "qualifier": "UTS",
+      "name": "CalculatorTest.java",
+      "longName": "src/test/java/com/example/cicd/CalculatorTest.java",
+      "path": "src/test/java/com/example/cicd/CalculatorTest.java"
+    },
+    {
+      "organization": "lukmayr",
+      "key": "LukMayr_ci-cd-uebung-Mayrhuber:src/main/java/com/example/cicd/App.java",
+      "uuid": "AaGr8PRVU3o20iwK5k0e",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "App.java",
+      "longName": "src/main/java/com/example/cicd/App.java",
+      "path": "src/main/java/com/example/cicd/App.java"
+    },
+    {
+      "organization": "lukmayr",
+      "key": "LukMayr_ci-cd-uebung-Mayrhuber:src/main/java/com/example/cicd/NumberUtils.java",
+      "uuid": "AaGr8PRVU3o20iwK5k0f",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "NumberUtils.java",
+      "longName": "src/main/java/com/example/cicd/NumberUtils.java",
+      "path": "src/main/java/com/example/cicd/NumberUtils.java"
+    },
+    {
+      "organization": "lukmayr",
+      "key": "LukMayr_ci-cd-uebung-Mayrhuber:src/main/java/com/example/cicd/Calculator.java",
+      "uuid": "AaGr8PRVU3o20iwK5k0g",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "Calculator.java",
+      "longName": "src/main/java/com/example/cicd/Calculator.java",
+      "path": "src/main/java/com/example/cicd/Calculator.java"
+    },
+    {
+      "organization": "lukmayr",
+      "key": "LukMayr_ci-cd-uebung-Mayrhuber:src/main/java/com/example/cicd/TextUtils.java",
+      "uuid": "AaGr8PRVU3o20iwK5k0h",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "TextUtils.java",
+      "longName": "src/main/java/com/example/cicd/TextUtils.java",
+      "path": "src/main/java/com/example/cicd/TextUtils.java"
+    }
+  ],
+  "organizations": [
+    {
+      "key": "lukmayr",
+      "name": "LukMayr"
+    }
+  ],
+  "facets": []
+}

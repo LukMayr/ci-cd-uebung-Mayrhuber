@@ -1,5 +1,7 @@
 # CI/CD Übung – Java Basisprojekt (Ü1 mit Anleitungen)
 
+[![CI](https://github.com/LukMayr/ci-cd-uebung-Mayrhuber/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/LukMayr/ci-cd-uebung-Mayrhuber/actions/workflows/ci.yml)
+
 Dieses Repository ist der Startpunkt für **Übung 1** und wird in **allen folgenden Übungen** weiterverwendet
 (CI mit GitHub Actions → SonarCloud → Docker → Security-Scan).
 
@@ -23,10 +25,40 @@ mvn -q -DskipTests=false test
 ```
 Coverage-Report (für Übung 2 / SonarCloud): `target/site/jacoco/index.html`
 
-> **Hinweis:** `TextUtilsTest` enthält einen bewusst fehlschlagenden Test (`isPalindrome_caseInsensitive_expectedTrue`), der erst in Übung 2 behoben wird. Bis dahin endet `mvn test` mit **1 Failure** und `BUILD FAILURE`, und der Coverage-Report wird nicht erzeugt. Den Report gibt es trotzdem mit:
-> ```bash
-> mvn test -Dmaven.test.failure.ignore=true
-> ```
+Der ursprünglich bewusst fehlschlagende Palindrom-Test wurde in Übung 2 behoben.
+Tests werden regulär ausgeführt; fehlgeschlagene Tests lassen den Build fehlschlagen.
+
+## Übung 2 – CI und SonarCloud
+
+Die [CI-Pipeline](.github/workflows/ci.yml) führt `mvn --batch-mode --no-transfer-progress clean verify`
+mit Temurin auf Ubuntu (Java 17 und 21) sowie Windows (Java 21) aus.
+Windows/Java 17 ist ausgeschlossen, um Runner-Zeit zu sparen; beide Betriebssysteme und
+beide Java-Versionen bleiben abgedeckt. Surefire-Berichte werden auch bei Testfehlern
+hochgeladen. Jeder erfolgreiche Matrix-Job erzeugt außerdem ein JaCoCo-Artefakt mit HTML/XML.
+
+Jeder Push auf `main` startet die Pipeline einschließlich SonarCloud-Analyse.
+Pull Requests auf `main` starten die Matrix bei Änderungen an Java-Quellen, `pom.xml`
+oder der Pipeline; reine Dokumentationsänderungen starten keine PR-Pipeline.
+Über `workflow_dispatch` kann die Pipeline manuell gestartet werden
+(SonarCloud nur auf `main`). Überholte PR-Läufe werden abgebrochen; Main-Läufe
+haben je Commit eine eigene Concurrency-Gruppe.
+
+SonarCloud-Einrichtung:
+
+1. Dieses GitHub-Repository in SonarCloud importieren und **Automatic Analysis deaktivieren**.
+2. Unter GitHub **Settings → Secrets and variables → Actions → Secrets**
+   einen Token mit Analyserechten als `SONAR_TOKEN` hinterlegen.
+3. Auf `main` ausführen und Analyse, Coverage sowie Quality Gate prüfen.
+
+Die öffentlichen Schlüssel stehen in `pom.xml`: Organisation `lukmayr`,
+Projekt `LukMayr_ci-cd-uebung-Mayrhuber`.
+
+Der Maven-Scanner liest `SONAR_TOKEN` aus der Umgebung; Tokens gehören nicht in den Quellcode.
+Die Analyse importiert `target/site/jacoco/jacoco.xml` und wartet auf das Quality Gate.
+Fehlende Konfiguration oder ein fehlgeschlagenes Gate lassen den SonarCloud-Job fehlschlagen.
+
+Für den lokalen Build Java 17 oder 21 auswählen und `mvn clean verify` ausführen.
+Der [Arbeitsstand und die noch benötigten Nachweise](docs/UE02-progress.md) werden separat festgehalten.
 
 ---
 
