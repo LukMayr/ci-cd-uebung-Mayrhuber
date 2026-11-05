@@ -1,0 +1,35 @@
+{
+  "component": {
+    "id": "AaGr8LApI0NMjiG424EW",
+    "key": "LukMayr_ci-cd-uebung-Mayrhuber",
+    "name": "ci-cd-uebung",
+    "description": "\u00dcbung 1: Java-Basisprojekt f\u00fcr CI/CD Kurs",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "coverage",
+        "value": "46.7",
+        "bestValue": false
+      },
+      {
+        "metric": "bugs",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "code_smells",
+        "value": "10",
+        "bestValue": false
+      },
+      {
+        "metric": "ncloc",
+        "value": "229"
+      },
+      {
+        "metric": "vulnerabilities",
+        "value": "0",
+        "bestValue": true
+      }
+    ]
+  }
+}

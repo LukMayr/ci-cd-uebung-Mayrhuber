@@ -92,18 +92,26 @@ public int addAll(List<Integer> nums) {
   Organisation `lukmayr`, initiale Analyse vom 5. November 2026, 13:40:47 UTC.
 - Baseline: 11 offene Issues (1 Bug, 10 Code Smells), kein Coverage-Wert,
   Quality-Gate-Status `NONE`. Das ist noch kein erfolgreicher CI-Scan.
-- Die beiden oben dokumentierten Befunde sind behoben; die Bestätigung durch einen
-  weiteren SonarCloud-Scan steht noch aus.
+- Die beiden oben dokumentierten Befunde sind behoben und durch die Main-Analyse bestätigt.
 
-## Noch offen für den finalen PDF-Bericht
+## Abschließende Validierung
 
-- Erfolgreiche GitHub-Actions-Matrix mit Run-URL und Screenshot.
-- Drei Surefire-Artefakte mit Screenshot.
-- Repository-Secret `SONAR_TOKEN` konfigurieren. Die öffentlichen Schlüssel stehen im POM.
-- Automatic Analysis deaktivieren und erste CI-Analyse ausführen.
-- Die zwei behobenen SonarCloud-Befunde durch erneute Analyse verifizieren.
-- SonarCloud-Dashboard, Coverage und Quality Gate mit Screenshots belegen.
-- Finalen PDF-Bericht aus den verifizierten Ergebnissen erstellen.
+- [PR #3](https://github.com/LukMayr/ci-cd-uebung-Mayrhuber/pull/3) wurde gemergt.
+- [Main-CI-Run #3](https://github.com/LukMayr/ci-cd-uebung-Mayrhuber/actions/runs/42039967312),
+  Commit `113d9a6216dfae0b2988a1f18e8710527a49fcbc`: alle Matrix-Jobs und SonarCloud erfolgreich.
+- Der erste Main-Versuch hatte keinen verfügbaren `SONAR_TOKEN`. Nach Korrektur unter
+  Actions → Repository secrets war der Wiederholungslauf erfolgreich.
+- Automatic Analysis ist deaktiviert; das Repository-Secret ist eingerichtet.
+- Main Quality Gate: `OK`; SonarCloud-Coverage: 46,7 % (inklusive Branch-Coverage).
+- `java:S4973` und `java:S4144` sind nicht mehr in der offenen Issue-Liste enthalten.
+- 0 Bugs, 0 Vulnerabilities, 10 verbleibende Code Smells. Unabhängige Starter-Befunde
+  wurden nicht als Teil dieser beiden Korrekturen verändert.
+- Die ergänzende lokale PR-Analyse lieferte ein bestandenes Quality Gate,
+  0 neue Issues, 100 % Coverage auf geändertem Code und 0 % Duplikation auf neuem Code.
+- Drei Surefire- und drei JaCoCo-Artefakte im Main-Run verifiziert.
+- Screenshots und API-Ergebnisse liegen in `docs/evidence/`.
+- [Finaler PDF-Bericht](../output/pdf/UE02-Mayrhuber.pdf): fünf Seiten, gerendert und visuell geprüft.
+- Noch durch den Studierenden: PDF und Repository-Link in eLearning einreichen.
 
 Die Aufgabenstellung nennt den 6. November 2025 als Abgabedatum; das tatsächliche
 Abgabedatum für das Studienjahr 2026/27 ist noch zu bestätigen.

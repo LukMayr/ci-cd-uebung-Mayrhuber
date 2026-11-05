@@ -58,7 +58,8 @@ Die Analyse importiert `target/site/jacoco/jacoco.xml` und wartet auf das Qualit
 Fehlende Konfiguration oder ein fehlgeschlagenes Gate lassen den SonarCloud-Job fehlschlagen.
 
 Für den lokalen Build Java 17 oder 21 auswählen und `mvn clean verify` ausführen.
-Der [Arbeitsstand und die noch benötigten Nachweise](docs/UE02-progress.md) werden separat festgehalten.
+Die [Validierung und Nachweise](docs/UE02-progress.md) sowie der
+[PDF-Bericht für Übung 2](output/pdf/UE02-Mayrhuber.pdf) sind im Repository enthalten.
 
 ---
 
